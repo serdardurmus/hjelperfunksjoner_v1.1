@@ -1,0 +1,1 @@
+Skriv python-programmet som tar et ord fra brukeren og skriver ut det totale antallet bokstaver "a" og "e" i ordet.
