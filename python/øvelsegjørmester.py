@@ -1,3 +1,89 @@
+
+# Andre 
+"""
+def mutlakdeger (a):
+    # Fonksiynumu tanıtan cümle yazıyorum 
+    if a < 0: a = a* (-1)
+    return a
+print(mutlakdeger(3.4))
+print(mutlakdeger(-4))
+print(mutlakdeger.__doc__)
+"""
+# def()
+"""
+def islem(a,b):
+    toplam = a + b
+    fark = a - b
+    return toplam, fark
+toplam, fark = islem(3,5)
+print(toplam, fark)
+print(type(toplam), type(fark))
+"""
+
+# def function
+"""
+def calculator(a,b,c):
+    if c == "+" : x = a+b
+    elif c == "-" : x = a-b
+    elif c == "*" : x = a*b
+    elif c == "/" : x = a/b 
+    else: return print("en feil")
+    return x
+
+print(calculator(3,5, "+"))
+"""
+
+# round()
+"""
+print(round(3.655,2))
+print(round(3.665,2))
+print(round(3.675,2))
+print(round(3.685,2))
+print(round(3.67501,2))
+"""
+
+
+# filter() enumerate()
+"""
+listeen = ["Susan", "tom", False, 0, "0", [], 5]
+filter_list = filter(None, listeen)
+for i in filter_list:
+    print(i)
+
+a = enumerate(listeen)
+print(dict(a))
+for i in a:
+    print(i)
+    print(type(i))
+"""
+
+# def function, import datetime, join()
+"""
+import datetime
+def print_time(oppgave):
+    print(oppgave)
+    print(datetime.datetime.now())
+
+en_liste = []
+print_time("Kode begynner")
+for i in range(1,11):
+    en_liste.append(str(i))
+print(",".join(en_liste))
+print_time("Kode sluttet")
+"""
+
+# datetime.datetime()
+"""
+import datetime
+print("Merhaba")
+print(datetime.datetime.now())
+for i in range(1,100): print(i)
+print(datetime.datetime.now())
+"""
+
+
+# andre
+"""
 line = 10
 print()
 for i in range(line):
@@ -6,6 +92,7 @@ for i in range(line*2-7):
     print(' '*(line+5-i)+'*'*(i+1)+'*'*12+' '*7+'*'*12+' '*7+'*'*12+' '*7+'*'*12)
 for i in range(5):
     print(' '*16+'*'*19+'*'*19+'*'*12+' '*7+'*'*12)
+"""
 
 #  nested for loop
 """
