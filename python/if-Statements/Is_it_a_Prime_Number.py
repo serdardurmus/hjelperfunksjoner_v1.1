@@ -15,3 +15,5 @@ else:
         if antallet%i == 0: prime = False
     if prime: print(f"{antallet} is a prime number")
     else: print(f"{antallet} is not a prime number")
+
+

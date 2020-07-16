@@ -1,3 +1,91 @@
+def meaner(bill, rossum, guido, gates):
+    avgg= (bill+ rossum+ guido +gates)/3
+    return avgg
+    
+    
+
+friends = {"bill": 4, "rossum":33, "guido":66, "gates":77}
+print(meaner(**friends))
+
+# The Matter of Arguments
+"""
+even_list = []
+odd_list = []
+def slicer(*sayilar):
+    global even_list, odd_list    
+    for i in sayilar:
+        if (i%2==0): even_list.append(i)
+        else: odd_list.append(i)
+    return even_list, odd_list
+
+slicer(1,2,3,4,5,6,7,8,9)
+print(even_list)
+print(odd_list)
+
+def slicer(*sayilar):
+    even = [i for i in sayilar if i%2==0]
+    odd = [j for j in sayilar if j%2!=0]
+    print(even, odd, sep="\n")
+
+slicer(1,2,3,4,5,6,7,8,9)
+"""
+# Correct Use of Arguments
+"""
+def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+    print("-- This parrot wouldn't", action, end=' ')
+    print("if you put", voltage, "volts through it.")
+    print("-- Lovely plumage, the", type)
+    print("-- It's", state, "!")
+
+parrot(1000,"2","2","2","2","2","4")  # positional parameters have to be first.
+"""
+
+"""
+print(list(i for i in "beri gel berber" if i == "e"))
+"""
+# list comprehension
+"""
+listem = []
+[listem.append(i) for i in "beri gel berber" if i !="e"]
+print(listem)
+"""
+
+# list comprehension
+"""
+letters = ["a", "b", "c", "d", "e", "i", "j", "x", "t"]
+
+def kelime_ara(kelime):
+    global letters
+    return True if kelime in letters else False
+
+print(kelime_ara("t"))
+"""
+
+
+# Jaså
+"""
+import sys
+
+x = [1, 2, 3]
+y = (1, 2, 3)
+
+print(sys.getsizeof(x))
+print(sys.getsizeof(y))
+"""
+
+
+# filter() function
+"""
+letters = ["a", "b", "c", "d", "i", "j", "x", "t", "e"]
+
+def filterVowel(let):
+    vowel = ["a", "e", "i", "o", "u"]
+    if let in vowel: return True
+    else: return False
+
+print(filterVowel("e"))
+print(list(filter(filterVowel, letters)))
+"""
 
 # Andre 
 """
