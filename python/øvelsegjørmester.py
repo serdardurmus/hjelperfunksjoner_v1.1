@@ -1,3 +1,25 @@
+numbers = [1,2,3,4,5,6,7,8,9]
+for i in numbers:
+    print(i, "=", (lambda x: "çift" if x%2 == 0 else "tek")(i), end= " ")
+print()
+print()
+
+# lambda, map
+"""
+print(*map((lambda x: str(x)+" is even" if x %2 ==0 else str(x)+" is odd"), [1,2,3,4,5,6]), sep = "\n")
+"""
+
+# def function
+"""
+def parrot_trouble(talking, hour):
+    if talking == True and (hour <= 6 or hour >= 21): return True
+    else: return False
+print(parrot_trouble(True, 5))
+print(parrot_trouble(False, 5))
+"""
+
+# ** kxargs
+"""
 def meaner(bill, rossum, guido, gates):
     avgg= (bill+ rossum+ guido +gates)/3
     return avgg
@@ -6,7 +28,7 @@ def meaner(bill, rossum, guido, gates):
 
 friends = {"bill": 4, "rossum":33, "guido":66, "gates":77}
 print(meaner(**friends))
-
+"""
 # The Matter of Arguments
 """
 even_list = []
@@ -283,3 +305,4 @@ print(range(5))
 print(*range(5,25,2))
 print(*range(10,0,-2))
 """
+
