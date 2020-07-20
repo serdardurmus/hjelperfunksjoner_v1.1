@@ -1,9 +1,149 @@
+from datetime import date, datetime
+
+birth = date(571, 4, 22)
+vefat = date(632, 6, 8)
+print(vefat-birth)
+print(date.toordinal(vefat) - date.toordinal(birth))
+
+# FEIL
+"""
+def equal (a,b,c):
+    number= [a,b,c]
+    result = number.count(max(number, key=number.count))
+    return result if result>1 else 0
+
+print(equal(2,3,3))
+print(equal(3,3,3))
+
+def equall(a,b,c):
+    number= [a,b,c]
+    result = number.count(max(number, key=number.count))
+    return lambda x,y,z: result if result>1 else 0
+
+deneme = equall(1,1,2)
+print(deneme)
+"""
+
+# func_generator !!!
+"""
+def func_generator(function):
+    return lambda x : function(x)
+
+myprint = func_generator(print)
+print(myprint("serdar"))
+mymax = func_generator(max)
+print(mymax([1,2,3,4,5]))
+"""
+
+# User defined function, lambda
+"""
+import random
+words = ["apple ", "swim ", "clock ", "me ", "kiwi ", "banana "]
+number =random.randint(1,5)
+def func(n):
+    return lambda x: x*n
+
+# print(*map(func(number), words), sep="\n")
+
+"""
+
+# User defined function, lambda
+"""
+def power1(n):
+    return lambda x : x * n
+words = ["apple ", "swim ", "clock ", "me ", "kiwi ", "banana "]
+print(*map(power1(2), words), sep=" \n")
+"""
+
+# User defined function, lambda -50
+"""
+def myPrint_smile_sad_neutral(n):
+    return lambda x: x+n
+
+print((myPrint_smile_sad_neutral(":)"))("hello " ))
+print((myPrint_smile_sad_neutral(":("))("hello " ))
+print((myPrint_smile_sad_neutral(":|"))("hello " ))
+"""
+# User defined function, lambda -49
+"""
+def modfunc(n):
+    return lambda x: x*n
+
+print((modfunc(3))("Serdar " ))
+print((modfunc(2))("Emre "))
+print((modfunc(1))("Mert "))
+"""
+
+# User defined function, lambda
+"""
+def modfunc(n):
+    return lambda x: x**n
+
+result = modfunc(3)
+print(result(3))
+"""
+
+# filter(), lambda
+"""
+sesli_harfler = ["a","e","i","o","u"]
+listem = ["a","b","c","d","e","z"]
+
+print(*(filter(lambda x: True if x in sesli_harfler else False, listem)))
+"""
+
+# filter() lambda
+"""
+words = ["apple", "swim", "clock", "me", "kiwi", "banana"]
+print(*(filter(lambda x : len(x) < 5, words)), sep = "\n")
+"""
+
+# lambda, map
+"""
+words1 = ["you", "much", "hard"]
+words2 = ["i", "he", "she"]
+words3 = ["love", "works", "ate"]
+
+result = map(lambda x,y,z: x+" "+y+" "+ z, words2,words3,words1)
+for i in result:
+    print(i)
+"""
+
+# lambda, map()
+"""
+nums1 = [9,6,7,4]
+nums2 = [3,6,5,8]
+
+result = map(lambda x, y: (x+y)/2, nums1, nums2)
+print(list(result))
+"""
+
+# random
+"""
+from random import choice
+
+city = ['Stockholm', 'Istanbul', 'Seul', 'Cape Town']
+print(choice(city))  
+"""
+
+# Define your own factorial function named factor using def.
+"""
+def factor(a):
+    fac = 1
+    for i in range(1,a+1):
+        fac *= i
+    return fac
+
+print(factor(5))
+"""
+
+# lambda, for loop
+"""
 numbers = [1,2,3,4,5,6,7,8,9]
 for i in numbers:
     print(i, "=", (lambda x: "çift" if x%2 == 0 else "tek")(i), end= " ")
 print()
 print()
-
+"""
 # lambda, map
 """
 print(*map((lambda x: str(x)+" is even" if x %2 ==0 else str(x)+" is odd"), [1,2,3,4,5,6]), sep = "\n")
