@@ -1,14 +1,7 @@
-# 
-def func1(x):
-    return print(x**2)
+#
 
-def func2(y):
-    return print(*y)
 
-if __name__=="__main__":
-    print("hello")
-    print(func1(5))
-    print(func2("Serdar"))
+
 
 # import date, datetime
 """
