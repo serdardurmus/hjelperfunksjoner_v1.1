@@ -1,6 +1,23 @@
-# 
+# Exception Handling 2
+try:
+    number1 = int(input("Please enter a nubmer: "))
+    number2 = int(input("Please enter a number: "))
+    division = number1 / number2
+    print("The result of the division is : ", division)
+except Exception as result:
+    print(f"Probably it is because of '{result}' error")
 
-
+# Exception Handling 1
+"""
+a = input("Please enter a number: ")
+b = input("Please enter a number: ")
+try:
+    print(int(a)/int(b))
+except ZeroDivisionError:
+    print("Bir sayının 0'a bölümü tanımsızdır")
+except (TypeError, ValueError):
+    print("Lütfen int değer giriniz.")
+"""
 # import date, datetime
 """
 from datetime import date, datetime
