@@ -1,4 +1,24 @@
+
+
+# Missing Char
+# To improve your defining function skills and string indexing ability.
+"""
+Given a non-empty string and an int n, return a new string where the character 
+at index n has been removed. The value of n will be a valid index of a 
+character in the original string (i.e. n will be in the range 0....len(str)-1 
+inclusive).
+
+def missing_char(word, n):
+    a = ""
+    for i in word:
+        if word.index(i) == n: pass
+        else: a += i
+    return a
+print(missing_char('kitchen', 1))
+"""
+
 # Exception Handling 2
+"""
 try:
     number1 = int(input("Please enter a nubmer: "))
     number2 = int(input("Please enter a number: "))
@@ -6,6 +26,7 @@ try:
     print("The result of the division is : ", division)
 except Exception as result:
     print(f"Probably it is because of '{result}' error")
+"""
 
 # Exception Handling 1
 """
