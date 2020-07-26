@@ -15,8 +15,16 @@ The order of your output does not matter.
 """
 
 # ord = input("Skriv noen Anagrams ord: ")
-ord = ["eat", "tea", "tan", "ate", "nat", "bat"]
-result = []
-
-for i in ord:
+def group_anagrams(input):
+    my_dict = {}
+    for s in input:
+        key = ''.join(sorted(s))
+        if key in my_dict.keys():
+            my_dict[key].append(s)
+        else:
+            my_dict[key] = []
+            my_dict[key].append(s)
+    return list(my_dict.values())
     
+xx = ["eat", "tea", "tan", "ate", "nat", "bat"]
+print(group_anagrams(xx)) 

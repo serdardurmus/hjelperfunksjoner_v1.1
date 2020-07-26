@@ -1,3 +1,5 @@
+listem = [1,2,3,4]
+result = []
 
 
 # Missing Char
