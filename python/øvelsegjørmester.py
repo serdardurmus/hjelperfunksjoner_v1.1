@@ -1,9 +1,5 @@
-def front_back(word):
-    if len(word) ==1 : return word
-    return (word[len(word)-1:]+word[1:-1]+word[0:1])
-
-
-print(front_back('a'))
+liste = [i for i in range(20) if i % 2 == 0]
+print(liste)
 
 
 
