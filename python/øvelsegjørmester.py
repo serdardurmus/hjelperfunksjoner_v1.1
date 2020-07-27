@@ -1,5 +1,10 @@
-listem = [1,2,3,4]
-result = []
+def front_back(word):
+    if len(word) ==1 : return word
+    return (word[len(word)-1:]+word[1:-1]+word[0:1])
+
+
+print(front_back('a'))
+
 
 
 # Missing Char
