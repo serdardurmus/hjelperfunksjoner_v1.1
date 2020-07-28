@@ -1,3 +1,20 @@
+
+
+
+# nested list
+"""a = [['Harry', 39.21], ['Berry', 38.21],['Tina', 38.21], ['Akriti', 37.21], ['Harsh', 39]]
+a.sort()
+b = [i for i in a if i[0] != a[0][0]]
+print(b)
+c = [j for j in b if j[0] == b[0][0]]
+print(c)
+
+c.sort(key=lambda x: x[1])
+for i in range(len(c)):
+    print(c[i][1])
+"""
+
+
 # nesned dict
 """scores= {'Student-1': {'Lesson-1': 57, 'Lesson-2': 46, 'Lesson-3': 58, 'Lesson-4': 81, 'Lesson-5': 85}, 'Student-2': {'Lesson-1': 85, 'Lesson-2': 56, 'Lesson-3': 51, 'Lesson-4': 69, 'Lesson-5': 67}, 'Student-3': {'Lesson-1': 68, 'Lesson-2': 76, 'Lesson-3': 87, 'Lesson-4': 57, 'Lesson-5': 56}, 'Student-4': {'Lesson-1': 78, 'Lesson-2': 93, 'Lesson-3': 88, 'Lesson-4': 38, 'Lesson-5': 54}, 'Student-5': {'Lesson-1': 50, 'Lesson-2': 46, 'Lesson-3': 78, 'Lesson-4': 81, 'Lesson-5': 75}}
 max_avg = 0
