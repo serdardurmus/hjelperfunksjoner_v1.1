@@ -1,3 +1,17 @@
+# You are given a string S.
+# Your task is to find out if the string S contains: alphanumeric characters, 
+# alphabetical characters, digits, lowercase and uppercase characters.
+# Input Format
+# A single line containing a string S.
+"""s = input()
+print(any(s.isalnum() for i in s))
+print(any(s.isalpha() for i in s))
+print(any(s.isdigit() for i in s))
+print(any(s.islower() for i in s))
+print(any(s.isupper() for i in s))"""
+
+
+
 # In this challenge, the user enters a string and a substring. You have to print 
 # the number of times that the substring occurs in the given string. String 
 # traversal will take place from left to right, not from right to left.
