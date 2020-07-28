@@ -1,3 +1,25 @@
+# In this challenge, the user enters a string and a substring. You have to print 
+# the number of times that the substring occurs in the given string. String 
+# traversal will take place from left to right, not from right to left.
+# NOTE: String letters are case-sensitive.
+# Input Format
+# The first line of input contains the original string. The next line contains the substring.
+"""def count_substring(string, sub_string):
+    s = 0
+    for i in range(0, len(string)-1):
+        a = string.find(sub_string)
+        if a != -1:
+            s += 1
+            string = string[:a]+string[a+1:]
+    return s
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)"""
+
 # avarage, dict
 """n = int(input())
 student_marks = {}
