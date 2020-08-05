@@ -1,4 +1,6 @@
-class PlayStation(object):
+
+# OOP Tutorial_1
+"""class PlayStation(object):
     #model = "PS4"
     #price = 99
     def __init__(self, model, price):
@@ -25,7 +27,7 @@ playstation1.set_price(price)
 #playstation1.amount=50
 playstation1.amount=100
 playstation1.save_more()
-print(playstation1.buying_message)
+print(playstation1.buying_message)"""
 
 
 
