@@ -1,6 +1,27 @@
 # OOP Tutorial_5
+class calisan:
+    zam_orani = 1.05
 
+    def __init__(self, firstname, lastname, pay):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.pay = pay
+        self.mail = self.firstname+self.lastname+"@gmail.com"
+        
+    def fullname(self):
+        return f"{self.firstname} {self.lastname}"
+    def arttir(self):
+        self.pay = (self.pay * self.zam_orani )
 
+personel1 = calisan("serdar", "durmus", 2000)
+personel2 = calisan("ömer", "durmus", 3000)
+print(personel1.pay)
+personel1.arttir()
+print(personel1.pay)
+print(personel2.pay)
+personel2.zam_orani = 1.1
+personel2.arttir()
+print(personel2.pay)
 
 # OOP Tutorial_4
 """class Employee:
