@@ -14,18 +14,18 @@ class calisan:
         return f"{self.firstname} {self.lastname}"
     def arttir(self):
         self.pay = (self.pay * self.zam_orani )
+    
+    @classmethod
+    def zam_orani_degis(cls, yeni_oran):
+        cls.zam_orani = yeni_oran
 
-personel1 = calisan("serdar", "durmus", 2000)
-print(calisan.personel_sayisi)
-personel2 = calisan("ömer", "durmus", 3000)
-print(calisan.personel_sayisi)
+personel1 = calisan("serdar", "durmus", 2500)
+personel2 = calisan("ömer", "durmus", 1950)
 
-print(personel1.pay)
+calisan.zam_orani_degis(2)
 personel1.arttir()
-print(personel1.pay)
-print(personel2.pay)
-personel2.zam_orani = 1.1
 personel2.arttir()
+print(personel1.pay)
 print(personel2.pay)
 
 # OOP Tutorial_5
