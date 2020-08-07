@@ -1,3 +1,18 @@
+
+# %% 
+# methods
+class Square(object):
+    edge = 5 # meter
+    area = 0
+    def area(self):
+        self.area = self.edge*self.edge
+        print(self.area)
+s1 = Square()
+print(s1)
+print(s1.edge)
+print(s1.area())
+
+
 # %% 
 # Question: a.age =?
 class A:

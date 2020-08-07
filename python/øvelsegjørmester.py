@@ -1,6 +1,22 @@
+# 
+
+
+# Verilen 2 listenin kesişim elemanlarını set kullanmadan bulalım
+"""list1 = [1,2,3,4,8,9]
+list2 = [2,3,6,11]
+intersect = list(filter(lambda x: x in list1, list2))
+print("Kesişim elemanları: ", intersect)
+
+kesisim = [i for i in list1 if i in list2]
+print(kesisim)
+
+def intersectt(a,b):
+    return list(set(list1) & set(list2))
+print(intersectt(list1, list2))"""
+
 # OOP Tutorial_6
 
-class calisan:
+"""class calisan:
     zam_orani = 1.05
     personel_sayisi = 0
 
@@ -26,7 +42,7 @@ calisan.zam_orani_degis(2)
 personel1.arttir()
 personel2.arttir()
 print(personel1.pay)
-print(personel2.pay)
+print(personel2.pay)"""
 
 # OOP Tutorial_5
 """class calisan:
