@@ -1,8 +1,52 @@
 
 
-# %% 
-# inheritance
 
+
+# %% 
+# inheritance (mini project)
+
+
+
+
+
+# %% 
+# inheritance (kalıtım)
+
+# parent
+class Animal:
+    def __init__(self):
+        print("Animal is created")
+    def toString(self):
+        print("animal")
+    def walk(self):
+        print("Animal walk")
+# child
+class Monkey(Animal):
+    def __init__(self):
+        super().__init__() # use init if parent (animal) class
+        print("Monkey is created")
+    def toString(self):
+        print("monkey")
+    def climb(self):
+        print("monkey can climb")
+
+#child
+class Bird(Animal):
+    def __init__(self):
+        super().__init__() # use init if parent (animal) class
+        print("Bird is created")
+    def toString(self):
+        print("Bird")
+    def fly(self):
+        print("Bird can fly")
+
+m1 = Monkey()
+m1.toString()
+m1.walk()
+
+b1 = Bird()
+b1.toString()
+b1.fly()
 
 
 
@@ -58,7 +102,6 @@ if selection == "+": print(c.add())
 elif selection == "*": print(c.multiply())
 elif selection ==  "/": print(c.division())
 else: print("Warning")
-
 
 
 
