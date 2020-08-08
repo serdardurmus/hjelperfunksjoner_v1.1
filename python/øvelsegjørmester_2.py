@@ -1,7 +1,37 @@
 
 
 # %% 
+# inheritance
+
+
+
+
+
+# %% 
 # encapsulation
+class BankAccount(object):
+    def __init__(self, name, money, address):
+        self.__name = name
+        self.__money = money
+        self.__address = address
+    
+    def getMoney(self):
+        return self.__money
+    def setMoney(self, amount):
+        self.__money = amount
+    # private
+    def __increase(self):
+        self.__money = self.__money + 10000
+
+person1 = BankAccount("Messi", 10000, "Barcelona")
+person2 = BankAccount("Neymar", 20000, "Paris")
+
+print("Get Moethod: ", person1.getMoney())
+person1.setMoney(50000)
+print("After Set Moethod: ", person1.getMoney())
+person1.__increase()
+print("After Set Moethod: ", person1.getMoney())
+
 
 
 # %% 
