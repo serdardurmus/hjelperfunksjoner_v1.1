@@ -1,3 +1,49 @@
+# %% 
+# calculator project
+
+# %% 
+# initializer or contructor
+
+class Animal(object):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def getAge(self):
+        return self.age
+
+a1 = Animal("dog", 2)
+print(a1.name)
+
+
+# %% Question 
+# a.getAge() = ?
+class A:
+    def __init__(self, age):
+        self.age = age
+        age = 15
+    def getAge(self):
+        return self.age
+a = A(22)
+print(a.getAge())
+
+
+# %% 
+# methods vs functions
+class Emp(object):
+    age = 25
+    salary = 1000 # $
+    def ageSalaryRation(self):
+        print(self.age / self.salary)
+# function
+def ageSalaryRation(age, salary):
+    print(age/salary)
+
+e1 = Emp()
+e1.ageSalaryRation()
+
+ageSalaryRation(30, 3000)
+
 
 # %% 
 # methods
