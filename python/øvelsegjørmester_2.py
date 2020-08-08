@@ -1,3 +1,26 @@
+# %% 
+# Abstract Classes (Soyut Klass)
+
+from abc import ABC, abstractmethod
+class Animal(ABC):
+    @abstractmethod
+    def walk(self): pass
+    @abstractmethod
+    def run(self): pass
+
+class Bird(Animal):
+    def __init__(self):
+        print("bird")
+    def walk(self):
+        print("walk")
+    def run(self):
+        print("run")
+    def fly(self):
+        print("fly")
+
+b1 = Bird()
+b1.walk()
+b1.fly()
 
 
 
