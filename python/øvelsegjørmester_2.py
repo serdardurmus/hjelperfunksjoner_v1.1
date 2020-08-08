@@ -4,7 +4,27 @@
 
 # %% 
 # inheritance (mini project)
+class Website:
+    "parent"
+    def __init__(self, name, surname):
+        self.name = name
+        self.surname = surname
+    def loginInfo(self):
+        print(self.name + " " + self.surname)
 
+class Website1(Website):
+    "child"
+    def __init__(self, name, surname, ids):
+        Website.__init__(self, name, surname)
+        self.ids = ids
+    def login(self):
+        print(self.name + " " + self.surname + " " + self.ids)
+
+p1 = Website("Serdar", "Durmus")
+p2 = Website1("Ömer", "Durmus", "12345")
+
+p1.loginInfo()
+p2.login()
 
 
 
