@@ -1,5 +1,36 @@
+
+
+# %% 
+# encapsulation
+
+
 # %% 
 # calculator project
+class Calc(object):
+
+    def __init__(self, value1, value2):
+        self.value1 = value1
+        self.value2 = value2
+    def add(self):
+        return self.value1 + self.value2
+    def multiply(self):
+        return self.value2 * self.value1
+    def division(self):
+        return self.value1 / self.value2
+
+print("Choose add(+), multiply(*), division(/)")
+selection = input("select + or * or / ")
+v1 = int(input("first value: "))
+v2 = int(input("second value: "))
+
+c = Calc(v1, v2)
+if selection == "+": print(c.add())
+elif selection == "*": print(c.multiply())
+elif selection ==  "/": print(c.division())
+else: print("Warning")
+
+
+
 
 # %% 
 # initializer or contructor
