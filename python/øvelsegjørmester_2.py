@@ -1,4 +1,48 @@
 # %% 
+# Polymorphism
+
+class Employee:
+    def raisee(self):
+        raise_rate = 0.1
+        result = 100 + 100 * raise_rate
+        print("Employee: ", result)
+class CompEng(Employee):
+    def raisee(self):
+        raise_rate = 0.2
+        result = 100 + 100 * raise_rate
+        print("CompEng: ", result)
+class EEEng(Employee):
+    def raisee(self):
+        raise_rate = 0.3
+        result = 100 + 100 * raise_rate
+        print("EEE: ", result)
+e1 = Employee()
+ce1 = CompEng()
+eee1 = EEEng()
+
+employee_list = [ce1, eee1]
+for i in employee_list:
+    print(i.raisee())
+
+# %% 
+# Overriding (Geçersiz kılma)
+class Animal:
+    def toString(self):
+        print("animal")
+
+class Monkey(Animal):
+    def toString(self):
+        print("monkey")
+
+a1 = Animal()
+a1.toString()
+
+m1 = Monkey()
+m1.toString()  # monkey calls overriding method
+
+
+
+# %% 
 # Abstract Classes (Soyut Klass)
 
 from abc import ABC, abstractmethod
