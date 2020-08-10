@@ -21,13 +21,33 @@ class VehicleRent:
             return None
         else:
             self.now = datetime.datetime.now()
+            print("Rented a {} vehicle for hourly at {} hours".format(n, self.now.hour))
+            self.stock -= n
+            return self.now
 
     def rentDaily(self, n):
         "rent rentDaily"
-        pass
+        if n <=0: 
+            print("Number should be positive")
+            return None
+        elif n > self.stock:
+            print("Sorry {} vehicle available to rent".format(self.stock))
+            return None
+        else:
+            self.now = datetime.datetime.now()
+            print("Rented a {} vehicle for daily at {} hours".format(n, self.now.hour))
+            self.stock -= n
+            return self.now        
+
     def returnVehicle(self, request, brand):
         "return a bill"
-        pass
+        car_hours_price = 10
+        car_daily_price = car_hours_price * 8 / 10 * 24
+        bike_hours_price = 5 
+        bike_daily_price =bike_hours_price * 7 / 10 * 24
+
+        rentalTime, rentalBasis, numOfVehicle = request
+        bill = 0
         
 
 # child class 1
