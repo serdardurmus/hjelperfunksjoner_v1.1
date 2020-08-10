@@ -48,6 +48,42 @@ class VehicleRent:
 
         rentalTime, rentalBasis, numOfVehicle = request
         bill = 0
+
+        if brand ==  "car":
+            if rentalTime and rentalBasis and numOfVehicle:
+                self.stock += numOfVehicle
+                now = datetime.datetime.now()
+                rentalPeriod = now - rentalTime
+
+                if rentalBasis == 1:  # hourly
+                    bill = rentalPeriod.second/3600*car_hours_price*numOfVehicle
+                elif rentalBasis == 2:  # daily
+                    bill = rentalPeriod.second/(3600*24)*car_daily_price*numOfVehicle
+                if (2 <= numOfVehicle):
+                    print("You have extra 20% discount")
+                    bill = bill * 0.8
+                print("Thank yo for returning your car")
+                print("Price: $ {}".format(bill))
+                return bill
+        elif brand ==  "bike":
+            if rentalTime and rentalBasis and numOfVehicle:
+                self.stock += numOfVehicle
+                now = datetime.datetime.now()
+                rentalPeriod = now - rentalTime
+
+                if rentalBasis == 1:  # hourly
+                    bill = rentalPeriod.second/3600*bike_hours_price*numOfVehicle
+                elif rentalBasis == 2:  # daily
+                    bill = rentalPeriod.second/(3600*24)*bike_daily_price*numOfVehicle
+                if (4 <= numOfVehicle):
+                    print("You have extra 20% discount")
+                    bill = bill * 0.8
+                print("Thank yo for returning your bike")
+                print("Price: $ {}".format(bill))
+                return bill
+        else:
+            print("YOu do not rent a vehicle")
+            return None
         
 
 # child class 1
