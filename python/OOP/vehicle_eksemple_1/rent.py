@@ -60,7 +60,7 @@ class VehicleRent:
                 elif rentalBasis == 2:  # daily
                     bill = rentalPeriod.second/(3600*24)*car_daily_price*numOfVehicle
                 if (2 <= numOfVehicle):
-                    print("You have extra 20% discount")
+                    print("You have extra %20 discount")
                     bill = bill * 0.8
                 print("Thank yo for returning your car")
                 print("Price: $ {}".format(bill))
@@ -76,7 +76,7 @@ class VehicleRent:
                 elif rentalBasis == 2:  # daily
                     bill = rentalPeriod.second/(3600*24)*bike_daily_price*numOfVehicle
                 if (4 <= numOfVehicle):
-                    print("You have extra 20% discount")
+                    print("You have extra %20 discount")
                     bill = bill * 0.8
                 print("Thank yo for returning your bike")
                 print("Price: $ {}".format(bill))
@@ -117,7 +117,7 @@ class Customer:
     def requestVehicle(self, brand):
         "take a request bike or car from customer"
         if brand == "bike":
-            bikes = inpur("How many bikes would you like to rent? ")
+            bikes = input("How many bikes would you like to rent? ")
             try:
                 bikes = int(bikes)
             except ValueError:
@@ -130,7 +130,7 @@ class Customer:
                 self.bikes = bikes
                 return self.bikes
         elif brand == "car":
-            cars = inpur("How many cars would you like to rent? ")
+            cars = input("How many cars would you like to rent? ")
             try:
                 cars = int(cars)
             except ValueError:
@@ -154,7 +154,7 @@ class Customer:
             else:
                 return 0,0,0
 
-        elif brand == "cars":
+        elif brand == "car":
             if self.rentalTime_c and self.rentalBasis_c and self.cars:
                 return self.rentalTime_c, self.rentalBasis_c, self.cars
             else:
