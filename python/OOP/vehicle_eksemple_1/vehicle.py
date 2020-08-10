@@ -16,3 +16,26 @@ class VehicleRent:
     def returnVehicle(self, request, brand):
         "return a bill"
         pass
+
+# child class 1
+class CarRent(VehicleRent):
+
+    def __init__():
+        pass
+    def discount():
+        pass
+
+# child class 2
+class BikeRent(VehicleRent):
+
+    def __init__():
+        pass
+
+# customer
+class Customer:
+    def __init__():
+        pass
+    def requestVehicle():
+        pass
+    def returnVehicle():
+        pass
