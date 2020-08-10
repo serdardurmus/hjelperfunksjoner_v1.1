@@ -105,11 +105,59 @@ class BikeRent(VehicleRent):
 
 # customer
 class Customer:
-    def __init__():
-        pass
-    def requestVehicle():
-        "request vehicle"
-        pass
-    def returnVehicle():
-        "return vehicle"
-        pass
+    def __init__(self):
+        self.bikes = 0
+        self.rentalBasis_b = 0
+        self.rentalTime_b = 0
+
+        self.cars = 0
+        self.rentalBasis_c = 0
+        self.rentalTime_c = 0
+
+    def requestVehicle(self, brand):
+        "take a request bike or car from customer"
+        if brand == "bike":
+            bikes = inpur("How many bikes would you like to rent? ")
+            try:
+                bikes = int(bikes)
+            except ValueError:
+                print("Number should ne Number")
+                return -1
+            if bikes < -1:
+                print("Number of Bikes should be greater than zero")
+                return -1
+            else:
+                self.bikes = bikes
+                return self.bikes
+        elif brand == "car":
+            cars = inpur("How many cars would you like to rent? ")
+            try:
+                cars = int(cars)
+            except ValueError:
+                print("Number should be Number")
+                return -1
+            if cars < -1:
+                print("Number of Cars should be greater than zero")
+                return -1
+            else:
+                self.cars = cars
+                return self.cars
+        else:
+            print("Request vehicle error")
+            
+
+    def returnVehicle(self, brand):
+        "return bikes or cars"
+        if brand == "bike":
+            if self.rentalTime_b and self.rentalBasis_b and self.bikes:
+                return self.rentalTime_b, self.rentalBasis_b, self.bikes
+            else:
+                return 0,0,0
+
+        elif brand == "cars":
+            if self.rentalTime_c and self.rentalBasis_c and self.cars:
+                return self.rentalTime_c, self.rentalBasis_c, self.cars
+            else:
+                return 0,0,0
+        else:
+            print("Return vehicle Error")
