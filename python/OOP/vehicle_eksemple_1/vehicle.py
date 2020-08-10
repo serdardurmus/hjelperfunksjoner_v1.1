@@ -88,18 +88,20 @@ class VehicleRent:
 
 # child class 1
 class CarRent(VehicleRent):
-
-    def __init__():
-        pass
-    def discount():
+    global discount_rate
+    discount_rate = 15
+    def __init__(self, stock):
+        super().__init__(stock)
+    def discount(self, b):
         "discount "
-        pass
+        bill = b - (b*discount_rate)/100
+        return bill
 
 # child class 2
 class BikeRent(VehicleRent):
 
-    def __init__():
-        pass
+    def __init__(self, stock):
+        super().__init__(stock)
 
 # customer
 class Customer:
