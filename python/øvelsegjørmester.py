@@ -1,15 +1,6 @@
 # 
-class Human: 
-
-    age=15	
-
-    def __init__(self, name): 
-
-         self._name = name 
-hmn_1 = Human('Corey')
-hmn_1.age = 20
-
-print(Human.age)
+num = (input("Tast inn to numre: ")).split()
+print(num)
 
 # Verilen 2 listenin kesişim elemanlarını set kullanmadan bulalım
 """list1 = [1,2,3,4,8,9]
