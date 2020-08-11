@@ -18,3 +18,4 @@ dev_1 = Developer("Martin", "Lane", 5000, "Python")
 # dev_2 = Developer("Martin2", "Lane2", 4000)
 
 print(dev_1.first)
+print(dev_1.prog_language)

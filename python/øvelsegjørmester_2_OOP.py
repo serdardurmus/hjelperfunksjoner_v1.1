@@ -1,4 +1,28 @@
 # %%
+# Magic Methods
+class Employee:
+    raise_amt = 1.04
+    
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+    def __repr__(self):
+        return "Employee('{}','{}',{})".format(self.first, self.last, self.pay)
+
+    def __add__(self, a):
+        return self.pay + a
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+
+emp_1 = Employee("Serdar", "Durmus", 5000)
+
+print(emp_1.__add__(200))
+print(emp_1.__repr__())
+
+
+# %%
 class Employee:
     raise_amt = 1.04
     
@@ -18,7 +42,39 @@ class Developer(Employee):
 dev_1 = Developer("Martin", "Lane", 5000, "Python")
 # dev_2 = Developer("Martin2", "Lane2", 4000)
 
-print(dev_1.first)
+class Manager(Employee):
+    raise_amt = 2
+    def __init__(self, first, last, pay, employees = None):
+        super().__init__(first, last, pay)
+        if employees is None:
+            self.employees = []
+        else:
+            self.employees = employees
+    def print_employees(self):
+        for emp in self.employees:
+            print("Developer: ", emp.first, emp.last)
+    def add_employees(self, emp):
+        if emp not in self.employees:
+            self.employees.append(emp)
+        else:
+            print("Zate listeye ekli.")
+
+
+manager1 = Manager("Serdar", "Durmus", 12000, [dev_1])
+manager1.print_employees()
+manager1.add_employees("Martin2")
+
+# print(isinstance(manager1, Manager))  # True
+# print(isinstance(manager1, Employee))  # True
+# print(isinstance(manager1, Developer))  # False
+
+# print(issubclass(Developer, Employee))  # True
+# print(issubclass(Manager, Employee))  # True
+# print(issubclass(Manager, Developer))  # False
+
+print(help(Manager))
+
+
 
 # %% 
 # Finaly Project
