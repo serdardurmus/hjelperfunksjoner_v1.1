@@ -12,7 +12,8 @@ print(kesisim)
 
 def intersectt(a,b):
     return list(set(list1) & set(list2))
-print(intersectt(list1, list2))"""
+print(intersectt(list1, list2))
+"""
 
 # OOP Tutorial_6
 
