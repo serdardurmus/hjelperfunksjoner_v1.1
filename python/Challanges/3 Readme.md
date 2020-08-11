@@ -1,1 +1,0 @@
- Prompts the user to guess the number between 1 and 100 randomly held by the computer, guides if the number entered by the user is smaller or greater than the number entered, and shows how many users know about the number if the number is found.
