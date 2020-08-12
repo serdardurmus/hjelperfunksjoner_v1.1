@@ -1,4 +1,41 @@
 # %%
+# GetSet
+# @property, deleter, setter
+
+class Employee:
+    raise_amt = 1.04
+    
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+    @property
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+    
+    @fullname.setter
+    def fullname(self, fullname):
+        first, last = fullname.split(" ")
+        self.first = first
+        self.last = last
+    
+    @fullname.deleter
+    def fullname(self):
+        self.first = None
+        self.last = None
+        print("Deleted")
+
+emp_1 = Employee("Serdar", "Durmus", 5000)
+emp_1.first = "Martin"
+print(emp_1.first)
+emp_1.fullname = "Tom Manager"
+print(emp_1.fullname)
+
+del emp_1.fullname
+print(emp_1.fullname)
+
+
+# %%
 # Magic Methods
 class Employee:
     raise_amt = 1.04
