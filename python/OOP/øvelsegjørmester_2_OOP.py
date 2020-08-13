@@ -1,4 +1,19 @@
 # %%
+# Dunder
+
+import datetime
+
+idag = datetime.date.today()
+
+print(idag)
+print(repr(idag))  # reprecentation
+print(str(idag))
+
+print(type(idag))
+print(type(repr(idag)))
+print(type(str(idag)))
+
+# %%
 # et eksemple
 
 class calisan(object):
@@ -51,17 +66,6 @@ gel1 = yonetici("geliştirici", "can", 6500, "Python")
 yön1 = yonetici("yönetici", "mehmet", 6500,[gel1, personel1])
 
 print(personel1 + personel2)
-
-# %%
-# Dunder
-
-import datetime
-
-idag = datetime.date.today()
-
-print(idag)
-print(repr(idag))  # reprecentation
-print(str(idag))
 
 # %%
 # GetSet
