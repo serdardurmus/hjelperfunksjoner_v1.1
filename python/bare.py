@@ -1,23 +1,21 @@
-def scope_test():
-    def do_local():
-        spam = "local spam"
+class sporcu():
+    def __init__(self, ad, brans, altin, gumus,bronz):
+        self.ad = ad 
+        self.brans = brans
+        self.mbronz = bronz  # public
+        self._mgumus = gumus  # protected
+        self.__maltin = altin  # privat
 
-    def do_nonlocal():
-        nonlocal spam
-        spam = "nonlocal spam"
+    def atlet_bilgisi(self):
+        return ("Sporcu adı: {} Branşı: {}".format(atlet1.ad, atlet1.brans))
+    @property
+    def altin_madalya(self):
+        amadalya = self.__maltin
+        return amadalya
 
-    def do_global():
-        global spam
-        spam = "global spam"
+atlet1 = sporcu("ali", "100 metre",2,3,9)
 
-    spam = "test spam"
-    do_local()
-    print("After local assignment:", spam)
-    do_nonlocal()
-    print("After nonlocal assignment:", spam)
-    do_global()
-    print("After global assignment:", spam)
-
-
-scope_test()
-print("In global scope:", spam)
+print(atlet1.atlet_bilgisi())
+print("Bronz madalya sayısı: ",atlet1.mbronz)
+print("Bronz madalya sayısı: ",atlet1._mgumus)
+print("Bronz madalya sayısı: ",atlet1.altin_madalya)
