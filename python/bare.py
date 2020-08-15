@@ -1,21 +1,12 @@
-class sporcu():
-    def __init__(self, ad, brans, altin, gumus,bronz):
-        self.ad = ad 
-        self.brans = brans
-        self.mbronz = bronz  # public
-        self._mgumus = gumus  # protected
-        self.__maltin = altin  # privat
+class Calculator:
+    def add(self, num1, num2):
+        return num1 + num2
+    def subtract(self, num1, num2):
+        return num1-num2
+    def multiply(self, num1, num2):
+        return num1 * num2
+    def divide(self, num1, num2):
+        return num1/num2
 
-    def atlet_bilgisi(self):
-        return ("Sporcu adı: {} Branşı: {}".format(atlet1.ad, atlet1.brans))
-    @property
-    def altin_madalya(self):
-        amadalya = self.__maltin
-        return amadalya
-
-atlet1 = sporcu("ali", "100 metre",2,3,9)
-
-print(atlet1.atlet_bilgisi())
-print("Bronz madalya sayısı: ",atlet1.mbronz)
-print("Bronz madalya sayısı: ",atlet1._mgumus)
-print("Bronz madalya sayısı: ",atlet1.altin_madalya)
+calculator = Calculator()
+print(calculator.add(10, 5))
