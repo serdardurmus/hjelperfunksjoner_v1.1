@@ -664,7 +664,7 @@ print(s1.edge)
 print(s1.area1())
 
 s1.edge = 7
-s1.area1()
+print(s1.area1())
 
 
 # %% 
