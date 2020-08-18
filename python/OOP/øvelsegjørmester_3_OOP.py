@@ -35,3 +35,25 @@ print(n1.threes)
 print(n1.ones)
 
 # %%
+class Employee:
+	def __init__(self, firstname, lastname):
+		self.firstname = firstname
+		self.lastname = lastname
+    @property
+    def fullname(self):
+        fullname = self.firstname + " " + self.lastname
+        return fullname
+    @property
+    def email(self):
+        eposta = self.firstname+"."+self.lastname+"@company.com"
+        return eposta
+
+
+emp_1 = Employee("John", "Smith")
+emp_2 = Employee("Mary",  "Sue")
+emp_3 = Employee("Antony", "Walker")
+
+print(emp_1.fullname)
+print(emp_2.email)
+print(emp_3.firstname)
+# %%

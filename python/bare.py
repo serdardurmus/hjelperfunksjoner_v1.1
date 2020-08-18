@@ -1,15 +1,22 @@
+class Employee:
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
+    
+    @property
+    def fullname(self):
+        a = self.firstname + " " + self.lastname
+        return a
+    @property
+    def email(self):
+        eposta = (self.firstname+"."+self.lastname+"@company.com").lower()
+        return eposta
 
 
-class ones_threes_nines:
-    def __init__(self, number):
-        self.number = number
-    def nines(self):
-        return int(self.number/9)
-    def threes(self):
-        return int(self.number/3)
-    def ones(self):
-        return int(self.number)
-n1 = ones_threes_nines(5)
-print(n1.nines())
-print(n1.threes())
-print(n1.ones())
+emp_1 = Employee("John", "Smith")
+emp_2 = Employee("Mary",  "Sue")
+emp_3 = Employee("Antony", "Walker")
+
+print(emp_1.fullname)
+print(emp_2.email)
+print(emp_3.firstname)
