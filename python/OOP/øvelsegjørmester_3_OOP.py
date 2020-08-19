@@ -57,3 +57,17 @@ print(emp_1.fullname)
 print(emp_2.email)
 print(emp_3.firstname)
 # %%
+class User:
+    user_count = 0
+    def __init__(self, name):
+        self.name = name
+        User.user_count += 1
+    
+
+u1 = User("johnsmith10")
+print(User.user_count)
+u2 = User("marysue1989")
+print(User.user_count)
+u3 = User("milan_rodrick")
+print(User.user_count)
+# %%
