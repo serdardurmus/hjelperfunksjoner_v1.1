@@ -71,3 +71,14 @@ print(User.user_count)
 u3 = User("milan_rodrick")
 print(User.user_count)
 # %%
+class Name:
+    def __init__(self, name, lastname):
+        self.name = name.capitalize()
+        self.lastname = lastname.capitalize()
+        self.fullname = self.name+" "+self.lastname
+        self.initials = self.name[0]+"."+self.lastname[0]
+
+a1 = Name("john", "SMITH")
+print(a1.name)
+print(a1.lastname)
+# %%
