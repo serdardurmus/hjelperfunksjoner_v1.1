@@ -1,3 +1,10 @@
+# Additional spaces have been added to a sentence. Return the correct sentence 
+# by removing them. All words should be separated by one space, and there 
+# should be no spaces at the beginning or end of the sentence.
+def correct_spacing(sentence):
+    return " ".join(sentence.split())
+
+print(correct_spacing("The film   starts       at      midnight. "))
 # Given a list, return the most frequent (repeating) element. 
 # Note : If there are the same number of repeating elements, it returns the first 
 # element that repeats most from left to right in the list.
