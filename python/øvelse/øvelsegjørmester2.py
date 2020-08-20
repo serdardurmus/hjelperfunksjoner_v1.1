@@ -1,10 +1,28 @@
+# Let's learn some new Python concepts! You have to generate a list of the 
+# first N fibonacci numbers, 0 being the first number. Then, apply the map 
+# function and a lambda expression to cube each fibonacci number and print 
+# the list.
+cube = lambda x: x**3
+
+def fibonacci(n):
+    fib_list = [0, 1]
+    any(map(lambda _: fib_list.append(sum(fib_list[-2:])), range(2, n)))
+    return fib_list[:n]
+
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
+
+
 # Additional spaces have been added to a sentence. Return the correct sentence 
 # by removing them. All words should be separated by one space, and there 
 # should be no spaces at the beginning or end of the sentence.
-def correct_spacing(sentence):
+"""def correct_spacing(sentence):
     return " ".join(sentence.split())
 
-print(correct_spacing("The film   starts       at      midnight. "))
+print(correct_spacing("The film   starts       at      midnight. "))"""
+
+
 # Given a list, return the most frequent (repeating) element. 
 # Note : If there are the same number of repeating elements, it returns the first 
 # element that repeats most from left to right in the list.
