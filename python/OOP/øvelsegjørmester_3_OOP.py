@@ -36,9 +36,9 @@ print(n1.ones)
 
 # %%
 class Employee:
-	def __init__(self, firstname, lastname):
-		self.firstname = firstname
-		self.lastname = lastname
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
     @property
     def fullname(self):
         fullname = self.firstname + " " + self.lastname

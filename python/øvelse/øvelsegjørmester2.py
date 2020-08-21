@@ -1,3 +1,13 @@
+# Write a Python code to draw whiteball and Powerball numbers for Powerball 
+# lottery game. 5 Whiteball numbers are choosen from 01 to 69 and 1 Powerball 
+# number is chosen 1 to 26.
+from numpy.random import randint
+for i in range(6):
+    if i < 5:
+        print(randint(1,69), end = ' ')
+    else:
+        print(' ', randint(1, 26))
+
 # Let's learn some new Python concepts! You have to generate a list of the 
 # first N fibonacci numbers, 0 being the first number. Then, apply the map 
 # function and a lambda expression to cube each fibonacci number and print 
