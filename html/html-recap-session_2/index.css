@@ -11,6 +11,22 @@ ul {
     padding: 10px;
     margin: 15px;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    height: 50px;
+    text-align: center;
+}
+
+td {
+    vertical-align: auto;
+}
+tr:hover {
+    background-color: blue;
+}
 /* h2 {
     color: blue;
 }
