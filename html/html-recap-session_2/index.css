@@ -18,15 +18,16 @@ table {
 }
 th {
     height: 50px;
-    text-align: center;
+    /* text-align: center; */
+    background-color: #4CAF50;
+    color: white;
 }
 
 td {
-    vertical-align: auto;
+    text-align: center;
 }
-tr:hover {
-    background-color: blue;
-}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
 /* h2 {
     color: blue;
 }
