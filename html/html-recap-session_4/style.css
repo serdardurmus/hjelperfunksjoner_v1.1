@@ -17,10 +17,12 @@
     border-right: 10px groove cyan;
     border-bottom: 15px outset #2586ff;
     border-left: 20px inset #10ef34;
+    border-radius: 20px;
 }
 
 #box4 {
     color: hsl(240, 100%, 50%); /* hsl value*/
+    
 }
 
 #box5 {
