@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("./images/back.jpg");
+}   
+
+#container {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 30px 100px;
+}
