@@ -1,0 +1,27 @@
+p {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.clear {
+    /* overflow: auto; */
+    clear: left;
+}
+
+/* img {
+    width: 200px;
+    margin-right: 10px;
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    
+} */
+
+img {
+    width: 200px;
+    margin-right: 10px;
+    float: left;
+    
+}
+
+
