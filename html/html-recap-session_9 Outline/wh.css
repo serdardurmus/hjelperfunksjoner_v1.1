@@ -6,17 +6,25 @@ body {
     width: 500px;
     height: 300px;
     margin: 0 auto;
-    padding: 2%;
+    padding: 10px;
+    /* box-sizing: border-box; */
 }
 .auto-width {
     width: auto;
     height: auto;
     background-color: aqua;
+    border: 2px solid black;
+    margin:  50px;
+    outline: 10px dashed red;
+    outline-offset: 15px;
 }
 .length-width {
     width: 50px;
     height: 50px;
     background-color: bisque;
+    margin: 50px;
+    outline: 10px dashed red;
+    outline-offset: 15px;
 }
 .percentage-width {
     width: 80%;
