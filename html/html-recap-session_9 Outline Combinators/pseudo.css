@@ -1,0 +1,35 @@
+a:link{
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+#link:hover {
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+a{
+    margin:40px;
+    outline:1px solid red;
+    padding: 1px;
+    transition: all ease-in-out 300ms;
+}
+
+p {
+    display: none;
+    background-color: yellowgreen;
+    padding: 20px;
+}
+
+div:hover ~ p {
+    display: block;
+}
+
+
+p:first-child {
+    color: mediumvioletred;
+}
