@@ -1,0 +1,15 @@
+div section {
+    background-color: salmon;
+}
+
+div > p {
+    background-color: mediumorchid;
+}
+
+p + section {
+    background-color: springgreen;
+}
+
+p ~ p {
+    color: red;
+}
