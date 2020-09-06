@@ -6,7 +6,7 @@ div{
     bottom: 0;
       background: url("https://picsum.photos/800/600?random=1"), rgba(0,0,0,0.5);
     background-blend-mode: multiply;
-    //background: url("https://picsum.photos/800/600?random=1"), url("https://picsum.photos/800/600?random=2");
-    // backgraound-size: contain;
-    backgraound-size: cover;
+    /* background: url("https://picsum.photos/800/600?random=1"), url("https://picsum.photos/800/600?random=2"); */
+    /* backgraound-size: contain; */
+    background-size: cover;
   }
