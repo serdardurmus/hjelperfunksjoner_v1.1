@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Session 1</title>
+
+    <style>
+        #btn-1 {
+            border: 3px solid brown;
+            padding: 10px 20px;
+            background-color: wheat;
+            font-weight: bold;
+        }
+        #btn-2 {
+            border: 3px solid black;
+            padding: 10px 20px;
+            background-color: brown;
+            color: wheat;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function changeColor(color){
+            document.bgColor = color;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Black" onclick="changeColor('black')" id="btn-1">
+        <input type="button" value="White" onclick="changeColor('white')" id="btn-2">
+    </form>
+</body>
+</html>
