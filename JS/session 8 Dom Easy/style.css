@@ -1,0 +1,14 @@
+.mySpan {
+    border: 1px solid blue;
+    color: white;
+    background-color: dodgerblue;
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#myDiv {
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid brown;
+}
