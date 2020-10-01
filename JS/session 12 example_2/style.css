@@ -3,3 +3,18 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.article {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-top: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.reading_count {
+  font-style: italic;
+}

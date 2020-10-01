@@ -1,15 +1,5 @@
-
 // DATA
-/* 
-  {
-    id: 0,
-    title: "Tempor aute aliqua repr",
-    desc: "Amet qui qui est sit culpa aliqua consequ. ",
-    readCount: 2310,
-  }
-*/
-const data = [
-  {
+const data = [{
     id: 0,
     title: "Tempor aute aliqua reprehenderit aute anim ullamco anim excepteur ad id.",
     desc: "Amet qui qui est sit culpa aliqua consequat in esse nisi mollit elit pariatur ipsum. Nulla do tempor ut sit qui. Laborum amet eiusmod Lorem dolor. Voluptate fugiat ipsum non ipsum proident reprehenderit adipisicing do anim ad cillum.",
@@ -40,3 +30,32 @@ const data = [
     readCount: 230,
   },
 ];
+
+// FUNCTIONS
+function loadArticles(readingCount) {
+  let articleData = data;
+  const articles = document.querySelector("#articles");
+  articles.innerHTML = "";
+  if (readingCount != undefined) {
+    articleData = data.filter((art) => readingCount < art.readCount);
+  }
+
+  articleData.forEach((d) => {
+    const articleElement = document.createElement("div");
+    articleElement.classList.add("article");
+    articleElement.innerHTML = `
+    <p class="title">${d.title}</p>
+    <p>${d.desc}</p>
+    <p class="reading_count">Reading: ${d.readCount}</p>`;
+    articles.appendChild(articleElement);
+  })
+}
+
+function filterArticles() {
+  const countValue = document.querySelector("#count_input").value;
+  loadArticles(countValue);
+}
+
+// LOAD AND CLICK BUTTON
+document.querySelector("#search_button").addEventListener("click", filterArticles);
+loadArticles();
