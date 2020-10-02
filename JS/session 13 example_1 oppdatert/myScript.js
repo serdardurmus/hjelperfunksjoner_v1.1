@@ -1,24 +1,24 @@
 // Change The Colors! 
 
 const colors = [{
-    name: "Red",
-    motto: "Rose Red",
+    name: "red",
+    motto: "rose Red",
   },
   {
-    name: "Blue",
-    motto: "Ocean Blue",
+    name: "blue",
+    motto: "ocean Blue",
   },
   {
-    name: "Gray",
-    motto: "Smoke Gray",
+    name: "gray",
+    motto: "smoke Gray",
   },
   {
-    name: "Green",
-    motto: "Grass Green",
+    name: "green",
+    motto: "grass Green",
   },
   {
-    name: "Purple",
-    motto: "Deep Purple",
+    name: "purple",
+    motto: "deep Purple",
   },
 ];
 
@@ -41,16 +41,28 @@ function changeColors() {
 function setColors () {
   const colorUserElements = document.querySelector(".colorInput");
   const colorData = colorUserElements.value.split(" ");
+  const colorObject = {
+    name: colorData[0],
+    motto: colorData[1],
+  };
+
   if (colorData[1] == undefined) {alert("Renk ya da Motto eksik.");}
   else if (color_list.findIndex((color) => color === colorData[0]) !== -1) {
-    if (colors.findIndex((color) => color === colorData[0]) !== -1) {
-      colors.push(colorData);
+    if (colors.findIndex((color) => color.name === colorObject.name) === -1) {
+      colors.push({name: colorData[0], motto: colorData[1]});
       console.log(colors);
+      document.querySelector("body").style.backgroundColor = colorData[0];
+      document.querySelector("#colorName").innerHTML = colorData[0];
+      document.querySelector("#colorDesc").innerHTML = colorData[1];
     } else {
     document.querySelector("body").style.backgroundColor = colorData[0];
     document.querySelector("#colorName").innerHTML = colorData[0];
     document.querySelector("#colorDesc").innerHTML = colorData[1];
-    console.log(colors);}
+    alert("Bu renk listende zaten var")
+    console.log(colors);
+  }
+  } else {
+    alert("Geçerli bir renk girmediniz.");
   }
 
 }
